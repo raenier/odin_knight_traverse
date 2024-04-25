@@ -15,7 +15,7 @@ class Knight
 
   attr_accessor :position
 
-  def initialize(start_position = [0, 0])
-    self.position = start_position
+  def initialize(y_start = 0, x_start = 0)
+    self.position = [y_start, x_start]
   end
 end
