@@ -35,5 +35,15 @@ class Knight
 
   def traverse(yinput, xinput)
     return 'Invalid Input' unless yinput.is_a?(Integer) && xinput.is_a?(Integer)
+
+    queue = possible_positions
+    given_position = [yinput, xinput]
+
+    until queue.empty?
+      current_position = queue
+      return current_position if current_position == given_position
+
+      queue << possible_positions(current_position)
+    end
   end
 end
