@@ -32,4 +32,8 @@ class Knight
 
     positions
   end
+
+  def traverse(yinput, xinput)
+    return 'Invalid Input' unless yinput.is_a?(Integer) && xinput.is_a?(Integer)
+  end
 end
