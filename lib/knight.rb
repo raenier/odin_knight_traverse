@@ -19,7 +19,7 @@ class Knight
     self.position = [y_start, x_start]
   end
 
-  def possible_positions
+  def possible_positions(position = self.position)
     positions = []
 
     MOVES.each do |ymove, xmove|
